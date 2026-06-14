@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 import swaggerUi from 'swagger-ui-express';
-import { env, getAllowedOrigins } from './config/env.js';
+import { getAllowedOrigins } from './config/env.js';
 import { swaggerSpec } from './config/swagger.js';
 import routes from './routes/index.js';
 import { errorHandler } from './middleware/errorHandler.js';
@@ -16,14 +16,7 @@ app.set('trust proxy', 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(
   cors({
-    origin: (origin, callback) => {
-      const allowed = getAllowedOrigins();
-      if (!origin || allowed.includes(origin) || env.NODE_ENV === 'development') {
-        callback(null, true);
-        return;
-      }
-      callback(null, false);
-    },
+    origin: getAllowedOrigins(),
     credentials: true,
   }),
 );

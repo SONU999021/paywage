@@ -24,6 +24,10 @@ export const env = {
     : `http://localhost:${parsed.PORT}`,
 };
 
+export const PRODUCTION_FRONTEND_URL = 'https://paywage-frontend.up.railway.app';
+
 export function getAllowedOrigins(): string[] {
-  return parsed.FRONTEND_URL.split(',').map((url) => url.trim()).filter(Boolean);
+  const fromEnv = parsed.FRONTEND_URL.split(',').map((url) => url.trim()).filter(Boolean);
+  const defaults = ['http://localhost:5173', PRODUCTION_FRONTEND_URL];
+  return [...new Set([...defaults, ...fromEnv])];
 }

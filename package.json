@@ -4,8 +4,8 @@
   "private": true,
   "description": "PayWage - Smart Payroll. Simplified Workforce Management.",
   "engines": {
-  "node": ">=20"
-},
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "npm run dev --workspace=backend",

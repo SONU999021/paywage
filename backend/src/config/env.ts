@@ -24,10 +24,13 @@ export const env = {
     : `http://localhost:${parsed.PORT}`,
 };
 
-export const PRODUCTION_FRONTEND_URL = 'https://paywage-frontend.up.railway.app';
+export const PRODUCTION_FRONTEND_URLS = [
+  'https://frontend-production-e9ac.up.railway.app',
+  'https://paywage-frontend.up.railway.app',
+];
 
 export function getAllowedOrigins(): string[] {
   const fromEnv = parsed.FRONTEND_URL.split(',').map((url) => url.trim()).filter(Boolean);
-  const defaults = ['http://localhost:5173', PRODUCTION_FRONTEND_URL];
+  const defaults = ['http://localhost:5173', ...PRODUCTION_FRONTEND_URLS];
   return [...new Set([...defaults, ...fromEnv])];
 }

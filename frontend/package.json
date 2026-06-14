@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.app.json && vite build",
-    "start": "serve dist -s -l $PORT",
+    "start": "node server.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -18,9 +18,11 @@ Deploy **PostgreSQL**, **Backend API**, and **Frontend** on Railway from one Git
 git init
 git add .
 git commit -m "PayWage V2 with Railway config"
-git remote add origin https://github.com/YOUR_USER/paywage.git
+git remote add origin https://github.com/<your-github-username>/paywage.git
 git push -u origin main
 ```
+
+> Replace `<your-github-username>` with your actual GitHub username. Create the empty repo on GitHub first (do not add README if you already have one locally).
 
 ---
 
@@ -138,13 +140,32 @@ Local URLs:
 
 ## Troubleshooting
 
+### Frontend keeps crashing (most common)
+
+1. **Check Root Directory** — Frontend service **must** be set to `frontend` (not repo root).
+   - Railway → Frontend service → **Settings** → **Root Directory** → `frontend`
+2. **Redeploy** after pushing the latest code (includes `server.mjs` fix for PORT).
+3. **Do not set `NODE_ENV=production` on frontend before build** — or ensure build uses dev deps (`npm install --include=dev`).
+4. **Set `VITE_API_URL`** before deploy:
+   ```
+   VITE_API_URL=https://your-backend.up.railway.app/api
+   ```
+
+### Backend / Prisma errors
+
+1. **Root Directory** must be `backend`.
+2. Build uses explicit schema path: `--schema=./prisma/schema.prisma`
+3. Link `DATABASE_URL` from PostgreSQL service.
+
 | Issue | Fix |
 |-------|-----|
+| `src refspec main does not match any` | Run `git branch -M main` then push |
 | CORS errors | Set `FRONTEND_URL` on backend to exact frontend URL (no trailing slash) |
 | API calls fail on frontend | Redeploy frontend with correct `VITE_API_URL` |
 | Database connection failed | Link Postgres `DATABASE_URL` reference on backend |
-| Migration failed | Check deploy logs; run `npx prisma migrate deploy` in Railway shell |
+| Migration failed | Check deploy logs; run `npx prisma migrate deploy --schema=./prisma/schema.prisma` in Railway shell |
 | Build fails on backend | Ensure root directory is `backend`, not repo root |
+| Frontend crash loop | Root directory = `frontend`, start command = `node server.mjs` |
 
 ---
 

@@ -1,2 +1,18 @@
 [variables]
 NIXPACKS_NODE_VERSION = "20"
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+cmds = [
+  "npx prisma generate --schema=./prisma/schema.prisma",
+  "npm run build",
+  "npx prisma migrate deploy --schema=./prisma/schema.prisma"
+]
+
+[start]
+cmd = "node dist/index.js"

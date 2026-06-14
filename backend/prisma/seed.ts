@@ -7,18 +7,18 @@ async function main() {
   const passwordHash = await bcrypt.hash('Admin@123', 12);
 
   const company = await prisma.company.upsert({
-    where: { email: 'admin@paywage.demo' },
+    where: { email: 'admin@paywager.demo' },
     update: {},
     create: {
-      name: 'PayWage Demo Corp',
+      name: 'PayWager Demo Corp',
       address: '123 Business Park, Mumbai, Maharashtra 400001',
       pan: 'AABCP1234D',
       gst: '27AABCP1234D1Z5',
       phone: '9876543210',
-      email: 'admin@paywage.demo',
+      email: 'admin@paywager.demo',
       users: {
         create: {
-          email: 'admin@paywage.demo',
+          email: 'admin@paywager.demo',
           passwordHash,
           firstName: 'Demo',
           lastName: 'Admin',
@@ -99,7 +99,7 @@ async function main() {
     },
   });
 
-  console.log('Seed completed. Login: admin@paywage.demo / Admin@123');
+  console.log('Seed completed. Login: admin@paywager.demo / Admin@123');
 }
 
 main()

@@ -1,8 +1,8 @@
 {
-  "name": "paywage",
+  "name": "paywager",
   "version": "2.0.0",
   "private": true,
-  "description": "PayWage - Smart Payroll. Simplified Workforce Management.",
+  "description": "PayWager - Smart Payroll. Simplified Workforce Management.",
   "engines": {
     "node": ">=20"
   },

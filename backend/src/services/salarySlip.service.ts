@@ -20,7 +20,7 @@ export async function generateSalarySlipPdf(companyId: string, slipId: string): 
   const company = slip.payrollRun.company;
   const emp = slip.employee;
 
-  const verificationUrl = `https://paywage.app/verify/${slip.id}`;
+  const verificationUrl = `https://paywager.app/verify/${slip.id}`;
   const qrDataUrl = await QRCode.toDataURL(verificationUrl);
 
   return new Promise((resolve, reject) => {

@@ -5,7 +5,7 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'PayWage API',
+      title: 'PayWager API',
       version: '2.0.0',
       description: 'Smart Payroll. Simplified Workforce Management.',
     },

@@ -48,7 +48,7 @@ export function RegisterPage() {
         <CardHeader className="text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">PW</div>
           <CardTitle>Register your company</CardTitle>
-          <p className="text-sm text-muted">Start your free trial with PayWage</p>
+          <p className="text-sm text-muted">Start your free trial with PayWager</p>
         </CardHeader>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {error && <div className="rounded-lg bg-danger/10 p-3 text-sm text-danger">{error}</div>}

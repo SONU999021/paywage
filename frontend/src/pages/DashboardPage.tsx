@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Users, UserCheck, UserX, Calendar, Wallet, Building2, Shield, Cake, Award } from 'lucide-react';
 import api from '@/lib/api';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
+import { PageError, PageLoading } from '@/components/ui/PageState';
 import { formatCurrency } from '@/lib/utils';
 
 interface DashboardStats {
@@ -38,7 +39,7 @@ const statCards: StatCard[] = [
 ];
 
 export function DashboardPage() {
-  const { data: stats, isLoading } = useQuery({
+  const { data: stats, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['dashboard-stats'],
     queryFn: async () => {
       const { data } = await api.get<DashboardStats>('/dashboard/stats');
@@ -47,7 +48,16 @@ export function DashboardPage() {
   });
 
   if (isLoading) {
-    return <div className="flex h-64 items-center justify-center text-muted">Loading dashboard...</div>;
+    return <PageLoading message="Loading dashboard..." />;
+  }
+
+  if (isError) {
+    return (
+      <PageError
+        message={(error as { response?: { data?: { error?: string } } })?.response?.data?.error || 'Could not load dashboard'}
+        onRetry={() => refetch()}
+      />
+    );
   }
 
   return (

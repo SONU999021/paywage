@@ -44,7 +44,7 @@ export function LoginPage() {
         <CardHeader className="text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">PW</div>
           <CardTitle>Welcome back</CardTitle>
-          <p className="text-sm text-muted">Sign in to your PayWage account</p>
+          <p className="text-sm text-muted">Sign in to your PayWager account</p>
         </CardHeader>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {error && <div className="rounded-lg bg-danger/10 p-3 text-sm text-danger">{error}</div>}

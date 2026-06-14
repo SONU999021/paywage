@@ -26,9 +26,9 @@ export function Sidebar() {
   return (
     <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col border-r border-border bg-background">
       <div className="flex h-16 items-center gap-2 border-b border-border px-6">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white">PW</div>
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white">PR</div>
         <div>
-          <p className="text-sm font-bold text-text">PayWage</p>
+          <p className="text-sm font-bold text-text">PayWager</p>
           <p className="text-xs text-muted">Workforce Management</p>
         </div>
       </div>

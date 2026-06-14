@@ -20,9 +20,9 @@ const pricing = [
 ];
 
 const faqs = [
-  { q: 'Is PayWage suitable for Indian statutory compliance?', a: 'Yes. PayWage supports PF, ESI, Professional Tax, and LWF calculations as per Indian regulations.' },
+  { q: 'Is PayWager suitable for Indian statutory compliance?', a: 'Yes. PayWager supports PF, ESI, Professional Tax, and LWF calculations as per Indian regulations.' },
   { q: 'Can I import existing employee data?', a: 'Yes. Use our Excel import wizard with sample formats, column mapping, and error reporting.' },
-  { q: 'Does PayWage support multiple companies?', a: 'Yes. Enterprise plans support multi-company management with role-based access control.' },
+  { q: 'Does PayWager support multiple companies?', a: 'Yes. Enterprise plans support multi-company management with role-based access control.' },
   { q: 'How secure is my payroll data?', a: 'We use JWT authentication, encrypted passwords, audit trails, rate limiting, and role-based permissions.' },
 ];
 
@@ -33,7 +33,7 @@ export function LandingPage() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-bold text-white">PW</div>
-            <span className="text-xl font-bold text-text">PayWage</span>
+            <span className="text-xl font-bold text-text">PayWager</span>
           </div>
           <div className="hidden items-center gap-8 md:flex">
             <a href="#features" className="text-sm text-muted hover:text-text">Features</a>
@@ -74,7 +74,7 @@ export function LandingPage() {
       <section id="features" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-center text-3xl font-bold text-text">Everything you need for payroll</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-muted">From startups to enterprises, PayWage scales with your workforce.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-muted">From startups to enterprises, PayWager scales with your workforce.</p>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((f) => (
               <div key={f.title} className="rounded-xl border border-border bg-card p-6">
@@ -91,7 +91,7 @@ export function LandingPage() {
 
       <section className="bg-card px-6 py-20">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-center text-3xl font-bold text-text">Why choose PayWage?</h2>
+          <h2 className="text-center text-3xl font-bold text-text">Why choose PayWager?</h2>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {['Reduce payroll processing time by 80%', 'Automated statutory compliance', 'Role-based access for HR, Payroll & Employees', 'Audit trails for every action', 'Excel import with error reporting', 'Professional PDF salary slips'].map((b) => (
               <div key={b} className="flex items-center gap-3">
@@ -137,7 +137,7 @@ export function LandingPage() {
           <h2 className="text-center text-3xl font-bold text-text">Trusted by businesses</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { name: 'Rajesh Kumar', role: 'HR Head, TechStart', text: 'PayWage reduced our monthly payroll time from 3 days to 4 hours.' },
+              { name: 'Rajesh Kumar', role: 'HR Head, TechStart', text: 'PayWager reduced our monthly payroll time from 3 days to 4 hours.' },
               { name: 'Priya Sharma', role: 'Finance Director', text: 'PF and ESI compliance is now fully automated. Highly recommended.' },
               { name: 'Amit Patel', role: 'CEO, GrowthCorp', text: 'The rule engine and Excel import saved us weeks of manual work.' },
             ].map((t) => (
@@ -171,7 +171,7 @@ export function LandingPage() {
       <section id="contact" className="bg-primary px-6 py-20 text-white">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold">Ready to simplify your payroll?</h2>
-          <p className="mt-4 opacity-90">Contact us at sales@paywage.app or call +91 98765 43210</p>
+          <p className="mt-4 opacity-90">Contact us at sales@paywager.app or call +91 98765 43210</p>
           <div className="mt-8 flex justify-center gap-4">
             <Link to="/register"><Button size="lg" className="bg-white text-primary hover:bg-white/90">Start Free Trial</Button></Link>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Book Demo</Button>
@@ -181,7 +181,7 @@ export function LandingPage() {
 
       <footer className="border-t border-border px-6 py-8">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-muted">© 2026 PayWage. All rights reserved.</p>
+          <p className="text-sm text-muted">© 2026 PayWager. All rights reserved.</p>
           <p className="text-sm text-muted">Smart Payroll. Simplified Workforce Management.</p>
         </div>
       </footer>

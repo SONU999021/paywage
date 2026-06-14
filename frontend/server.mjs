@@ -77,6 +77,6 @@ server.on('error', (err) => {
 });
 
 server.listen(port, host, () => {
-  log(`listening on http://${host}:${port}`);
+  log(`PayWager frontend listening on http://${host}:${port}`);
   log('dist:', distDir);
 });

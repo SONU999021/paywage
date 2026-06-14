@@ -32,7 +32,7 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', service: 'PayWage API', version: '2.0.0' });
+  res.json({ status: 'ok', service: 'PayWager API', version: '2.0.0' });
 });
 
 app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

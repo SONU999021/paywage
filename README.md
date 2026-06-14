@@ -1,4 +1,4 @@
-# PayWage V2
+# PayWagerr V2
 
 **Smart Payroll. Simplified Workforce Management.**
 
@@ -31,7 +31,7 @@ Enterprise-grade payroll and workforce management SaaS platform built for Indian
 ## Project Structure
 
 ```
-paywage/
+paywager/
 ├── backend/          # Express API + Prisma
 │   ├── prisma/       # Database schema & seed
 │   └── src/
@@ -104,7 +104,7 @@ npm run dev
 
 After seeding:
 
-- **Email:** admin@paywage.demo
+- **Email:** admin@paywager.demo
 - **Password:** Admin@123
 
 ## Scripts

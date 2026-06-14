@@ -29,4 +29,23 @@ router.post('/employees', upload.single('file'), async (req: AuthRequest, res, n
   }
 });
 
+router.post('/attendance', upload.single('file'), async (req: AuthRequest, res, next) => {
+  try {
+    if (!req.file) {
+      res.status(400).json({ error: 'File required' });
+      return;
+    }
+    const allowed = ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel', 'text/csv', 'application/csv'];
+    if (!allowed.includes(req.file.mimetype) && !req.file.originalname.match(/\.(xlsx|xls|csv)$/i)) {
+      res.status(400).json({ error: 'Invalid file format. Use .xlsx, .xls, or .csv' });
+      return;
+    }
+    const rows = importService.parseExcelBuffer(req.file.buffer);
+    const result = await importService.importAttendance(req.user!.companyId!, rows);
+    res.json(result);
+  } catch (err) {
+    next(err);
+  }
+});
+
 export default router;

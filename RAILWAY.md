@@ -140,16 +140,22 @@ Local URLs:
 
 ## Troubleshooting
 
+### "Merge remote main..." or "Co-authored-by: Cursor" in Railway
+
+This is **NOT an error** — it is just the **Git commit message** of the deployment Railway is running. Scroll down in the deploy logs to find the real error (usually near the bottom in red).
+
 ### Frontend keeps crashing (most common)
 
-1. **Check Root Directory** — Frontend service **must** be set to `frontend` (not repo root).
-   - Railway → Frontend service → **Settings** → **Root Directory** → `frontend`
-2. **Redeploy** after pushing the latest code (includes `server.mjs` fix for PORT).
-3. **Do not set `NODE_ENV=production` on frontend before build** — or ensure build uses dev deps (`npm install --include=dev`).
-4. **Set `VITE_API_URL`** before deploy:
+1. **Root Directory MUST be `frontend`**
+   - Railway → your **frontend service** → **Settings** → **Root Directory** → type exactly: `frontend`
+   - If this is blank or set to `/`, the app will crash (no start script at repo root).
+2. **Start Command:** `node server.mjs`
+3. **Build Command:** `npm install --include=dev && npm run build`
+4. Set **`VITE_API_URL`** before deploy:
    ```
    VITE_API_URL=https://your-backend.up.railway.app/api
    ```
+5. Click **Redeploy** after saving settings.
 
 ### Backend / Prisma errors
 

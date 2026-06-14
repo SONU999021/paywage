@@ -9,3 +9,4 @@ restartPolicyMaxRetries = 5
 
 [build.env]
 NIXPACKS_NODE_VERSION = "20"
+NIXPACKS_INSTALL_DEV_DEPS = "true"

@@ -1,9 +1,9 @@
 [build]
-builder = "nixpacks"
-buildCommand = "npm install && npx prisma generate && npm run build && npx prisma migrate deploy"
+buildCommand = "npm install --workspace=backend && cd backend && npx prisma generate && npm run build"
 
 [deploy]
-startCommand = "npm start"
+startCommand = "npm run start --workspace=backend"
+preDeployCommand = "cd backend && npx prisma migrate deploy"
 healthcheckPath = "/health"
 healthcheckTimeout = 120
 restartPolicyType = "ON_FAILURE"

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPay - Enterprise Payroll Suite</title>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="app-container">
+    
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <i class="fa-solid fa-file-invoice-dollar logo-icon"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ApexPay</span>
+          <span class="brand-sub">Payroll Suite</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <a href="#dashboard" class="nav-item active" id="btn-nav-dashboard">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#employees" class="nav-item" id="btn-nav-employees">
+          <i class="fa-solid fa-users-gear"></i>
+          <span>Employees</span>
+        </a>
+        <a href="#leaves" class="nav-item" id="btn-nav-leaves">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>Leaves Tracker</span>
+        </a>
+        <a href="#payroll" class="nav-item" id="btn-nav-payroll">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Payroll Run</span>
+        </a>
+        <a href="#settings" class="nav-item" id="btn-nav-settings">
+          <i class="fa-solid fa-sliders"></i>
+          <span>Control Panel</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span class="status-indicator online"></span>
+        <span class="status-text">Server Active</span>
+      </div>
+    </aside>
+    
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
+      
+      <!-- TOP NAVIGATION BAR -->
+      <header class="top-bar">
+        <div class="page-title-container">
+          <h1 id="page-heading">Dashboard Summary</h1>
+          <p id="page-subheading" class="text-muted">A summary of the current monthly payroll activities.</p>
+        </div>
+        
+        <div class="top-actions">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="global-search" placeholder="Search employees...">
+          </div>
+          
+          <div class="month-selector-container">
+            <i class="fa-solid fa-calendar-days text-muted"></i>
+            <input type="month" id="payroll-month-select" value="2026-05">
+          </div>
+        </div>
+      </header>
+      
+      <!-- VIEW PANELS -->
+      <div class="view-panel-container">
+        
+        <!-- DASHBOARD PANEL -->
+        <section id="view-dashboard" class="view-panel active">
+          <!-- Quick Statistics Cards -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon bg-blue">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Active Employees</h3>
+                <p id="stat-active-employees" class="stat-number">0</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-icon bg-emerald">
+                <i class="fa-solid fa-money-bill-wave"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Calculated Payroll (Net)</h3>
+                <p id="stat-payroll-total" class="stat-number">₹0</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-icon bg-purple">
+                <i class="fa-solid fa-business-time"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Pending Leaves</h3>
+                <p id="stat-pending-leaves" class="stat-number">0</p>
+              </div>
+            </div>
+            
+            <div class="stat-card">
+              <div class="stat-icon bg-orange">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Month-End Standard Days</h3>
+                <p id="stat-std-days" class="stat-number">31</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Recent Activity and Quick Actions -->
+          <div class="dashboard-grid">
+            <div class="dashboard-card col-2">
+              <div class="card-header">
+                <h2>Pending Leave Approvals</h2>
+                <a href="#leaves" class="card-action-link" id="link-all-leaves">Manage All</a>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Employee</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Days</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="dashboard-pending-leaves-body">
+                      <tr>
+                        <td colspan="5" class="text-center text-muted">No pending leave requests</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dashboard-card">
+              <div class="card-header">
+                <h2>Quick Controls</h2>
+              </div>
+              <div class="card-body controls-body">
+                <button class="btn btn-primary btn-block" id="btn-quick-import">
+                  <i class="fa-solid fa-file-import"></i> Bootstrap from Excel Sheet
+                </button>
+                <div class="alert-box info mt-4">
+                  <i class="fa-solid fa-info-circle alert-icon"></i>
+                  <p>Excel bootstrap reads employee details, basic salaries, HRA, and Special Allowances directly from <strong>May Payroll Data'2026.xlsx</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- EMPLOYEES PANEL -->
+        <section id="view-employees" class="view-panel">
+          <div class="view-header-actions">
+            <h2>Manage Employees</h2>
+            <button class="btn btn-primary" id="btn-add-employee">
+              <i class="fa-solid fa-user-plus"></i> Add New Employee
+            </button>
+          </div>
+          
+          <div class="card employee-list-card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Designation & Dept</th>
+                    <th>Basic Salary</th>
+                    <th>Allowances Count</th>
+                    <th>Bank Details</th>
+                    <th>PF/ESIC</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="employee-list-body">
+                  <!-- JS populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+        <!-- LEAVES PANEL -->
+        <section id="view-leaves" class="view-panel">
+          <div class="view-header-actions">
+            <h2>Leaves Tracker & Approval</h2>
+            <button class="btn btn-primary" id="btn-apply-leave">
+              <i class="fa-solid fa-calendar-plus"></i> Apply Leave
+            </button>
+          </div>
+          
+          <div class="card">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Employee Code</th>
+                    <th>Employee Name</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Days</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="leaves-list-body">
+                  <!-- JS populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+        <!-- PAYROLL PANEL -->
+        <section id="view-payroll" class="view-panel">
+          <div class="view-header-actions">
+            <div>
+              <h2>Payroll Calculation Panel</h2>
+              <span class="badge" id="payroll-status-badge">Locked</span>
+            </div>
+            
+            <div class="action-buttons-group">
+              <button class="btn btn-secondary" id="btn-save-payroll">
+                <i class="fa-solid fa-lock"></i> Save & Lock Calculations
+              </button>
+              <button class="btn btn-primary" id="btn-bulk-download">
+                <i class="fa-solid fa-file-zipper"></i> Bulk Word Download (.ZIP)
+              </button>
+            </div>
+          </div>
+          
+          <!-- Calculations Summary Table -->
+          <div class="card">
+            <div class="table-responsive">
+              <table class="data-table payroll-table">
+                <thead>
+                  <tr>
+                    <th>Code & Name</th>
+                    <th>Fixed Gross</th>
+                    <th>STD/LOP/WRK</th>
+                    <th>Earned Basic</th>
+                    <th>Earned Allow.</th>
+                    <th>PF (12%)</th>
+                    <th>ESIC (0.75%)</th>
+                    <th>TDS / Tax</th>
+                    <th>Other Ded.</th>
+                    <th>Net Payable</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="payroll-calculation-body">
+                  <!-- JS populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        
+        <!-- SETTINGS PANEL -->
+        <section id="view-settings" class="view-panel">
+          <h2>Global System Configuration</h2>
+          
+          <div class="settings-grid">
+            <div class="card settings-card">
+              <div class="card-header">
+                <h3>Company Profile</h3>
+              </div>
+              <div class="card-body">
+                <form id="form-settings-company">
+                  <div class="form-group">
+                    <label for="settings-company-name">Company Name</label>
+                    <input type="text" id="settings-company-name" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="settings-company-address">Company Address</label>
+                    <textarea id="settings-company-address" class="form-control" rows="3" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Profile</button>
+                </form>
+              </div>
+            </div>
+            
+            <div class="card settings-card">
+              <div class="card-header">
+                <h3>Deductions & Statutory Rates</h3>
+              </div>
+              <div class="card-body">
+                <form id="form-settings-rates">
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <label for="settings-pf-rate">Provident Fund (PF) Rate (%)</label>
+                      <input type="number" step="0.01" id="settings-pf-rate" class="form-control" required>
+                    </div>
+                    <div class="form-group col">
+                      <label for="settings-pf-cap">PF Monthly Cap (₹)</label>
+                      <input type="number" id="settings-pf-cap" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col">
+                      <label for="settings-esic-rate">ESIC Rate (%)</label>
+                      <input type="number" step="0.01" id="settings-esic-rate" class="form-control" required>
+                    </div>
+                    <div class="form-group col">
+                      <label for="settings-esic-threshold">ESIC Eligibility Limit (₹)</label>
+                      <input type="number" id="settings-esic-threshold" class="form-control" required>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save Rates</button>
+                </form>
+              </div>
+            </div>
+            
+            <div class="card settings-card col-2">
+              <div class="card-header">
+                <h3>Bootstrap & Imports</h3>
+              </div>
+              <div class="card-body">
+                <p class="mb-4">You have a file <strong>May Payroll Data'2026.xlsx</strong> inside your project directory. You can bootstrap your employee directory instantly by loading it.</p>
+                <div class="bootstrap-actions">
+                  <button class="btn btn-success" id="btn-settings-import">
+                    <i class="fa-solid fa-file-excel"></i> Load & Import Employees from Excel
+                  </button>
+                  <span id="excel-import-status" class="import-status text-muted ml-4"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+      </div>
+    </main>
+  </div>
+  
+  <!-- EMPLOYEE MODAL (ADD/EDIT) -->
+  <div class="modal-backdrop" id="modal-employee">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="employee-modal-title">Add New Employee</h2>
+        <button class="modal-close-btn" id="btn-close-employee-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-employee">
+          <!-- Section: Personal Info -->
+          <h4 class="form-section-title">Personal Details</h4>
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-code">Employee Code *</label>
+              <input type="text" id="emp-code" class="form-control" required placeholder="e.g. 88A1001">
+            </div>
+            <div class="form-group col">
+              <label for="emp-name">Full Name *</label>
+              <input type="text" id="emp-name" class="form-control" required placeholder="e.g. Narayan Kasat">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-joining">Joining Date</label>
+              <input type="date" id="emp-joining" class="form-control">
+            </div>
+            <div class="form-group col">
+              <label for="emp-dob">Date of Birth</label>
+              <input type="date" id="emp-dob" class="form-control">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-designation">Designation</label>
+              <input type="text" id="emp-designation" class="form-control" placeholder="e.g. Project Head">
+            </div>
+            <div class="form-group col">
+              <label for="emp-department">Department</label>
+              <input type="text" id="emp-department" class="form-control" placeholder="e.g. IT">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-pan">PAN</label>
+              <input type="text" id="emp-pan" class="form-control" placeholder="e.g. AGAPK2560P">
+            </div>
+            <div class="form-group col">
+              <label for="emp-aadhaar">Aadhaar Number</label>
+              <input type="text" id="emp-aadhaar" class="form-control" placeholder="e.g. 12-digit number">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-mobile">Mobile Number</label>
+              <input type="text" id="emp-mobile" class="form-control" placeholder="e.g. 9891054411">
+            </div>
+            <div class="form-group col">
+              <label for="emp-email">Email ID</label>
+              <input type="email" id="emp-email" class="form-control" placeholder="e.g. example@company.com">
+            </div>
+          </div>
+          
+          <!-- Section: Bank Info -->
+          <h4 class="form-section-title">Bank Details</h4>
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="emp-bank-name">Bank Name</label>
+              <input type="text" id="emp-bank-name" class="form-control" placeholder="e.g. AXIS BANK">
+            </div>
+            <div class="form-group col col-2">
+              <label for="emp-account-no">Account Number</label>
+              <input type="text" id="emp-account-no" class="form-control" placeholder="Bank Account Number">
+            </div>
+            <div class="form-group col">
+              <label for="emp-ifsc">IFSC Code</label>
+              <input type="text" id="emp-ifsc" class="form-control" placeholder="e.g. UTIB0004626">
+            </div>
+          </div>
+          
+          <!-- Section: Salary & Allowances -->
+          <h4 class="form-section-title">Salary & Allowances</h4>
+          <div class="form-row items-center">
+            <div class="form-group col">
+              <label for="emp-basic">Basic Monthly Salary * (₹)</label>
+              <input type="number" id="emp-basic" class="form-control" required placeholder="Monthly Basic">
+            </div>
+            <div class="form-group col checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="emp-pf-eligible" checked>
+                <span class="checkmark"></span>
+                Provident Fund (PF) Enrolled
+              </label>
+            </div>
+            <div class="form-group col checkbox-group">
+              <label class="checkbox-container">
+                <input type="checkbox" id="emp-esic-eligible">
+                <span class="checkmark"></span>
+                ESIC Enrolled
+              </label>
+            </div>
+          </div>
+          
+          <div class="allowances-section">
+            <div class="allowances-header">
+              <h5>Custom Monthly Allowances</h5>
+              <button type="button" class="btn btn-secondary btn-sm" id="btn-add-allowance-row">
+                <i class="fa-solid fa-plus"></i> Add Allowance
+              </button>
+            </div>
+            <div id="allowances-rows-container">
+              <!-- JS populated rows -->
+            </div>
+          </div>
+          
+          <div class="modal-footer mt-6">
+            <button type="button" class="btn btn-secondary" id="btn-cancel-employee-form">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="btn-save-employee-form">Save Employee</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- LEAVE MODAL (CREATE) -->
+  <div class="modal-backdrop" id="modal-leave">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Apply for Leave</h2>
+        <button class="modal-close-btn" id="btn-close-leave-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="form-leave">
+          <div class="form-group">
+            <label for="leave-emp-select">Select Employee *</label>
+            <select id="leave-emp-select" class="form-control" required>
+              <option value="">-- Choose Employee --</option>
+            </select>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="leave-type">Leave Type</label>
+              <select id="leave-type" class="form-control">
+                <option value="Unpaid">Unpaid / LOP (Loss of Pay)</option>
+                <option value="Sick">Sick Leave (Paid)</option>
+                <option value="Casual">Casual Leave (Paid)</option>
+              </select>
+            </div>
+            <div class="form-group col">
+              <label for="leave-days">Number of Days *</label>
+              <input type="number" step="0.5" id="leave-days" class="form-control" required placeholder="e.g. 1 or 1.5">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group col">
+              <label for="leave-start">Start Date *</label>
+              <input type="date" id="leave-start" class="form-control" required>
+            </div>
+            <div class="form-group col">
+              <label for="leave-end">End Date *</label>
+              <input type="date" id="leave-end" class="form-control" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="leave-reason">Reason</label>
+            <textarea id="leave-reason" class="form-control" rows="2" placeholder="Describe the reason for leave..."></textarea>
+          </div>
+          
+          <div class="modal-footer mt-6">
+            <button type="button" class="btn btn-secondary" id="btn-cancel-leave-form">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Execution -->
+  <script src="app.js"></script>
+</body>
+</html>

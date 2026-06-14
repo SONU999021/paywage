@@ -1,0 +1,1524 @@
+[
+  {
+    "employeeCode": "88A1001",
+    "employeeName": "Narayan Kasat",
+    "joiningDate": "01/11/2021",
+    "dateOfBirth": "27/06/1975",
+    "designation": "C.O.O",
+    "department": "Management",
+    "pan": "AGAPK2560P",
+    "aadhaar": "678252973676",
+    "mobileNumber": "9891054411",
+    "emailId": "narayan@88tuition.com",
+    "bankName": "AXIS BANK",
+    "accountNo": "921010013386877",
+    "ifscCode": "UTIB0004626",
+    "basicSalary": 150000,
+    "pfEligible": false,
+    "esicEligible": false,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 75000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 75000
+      }
+    ],
+    "gender": "M",
+    "fatherName": "Mr. H.L.Kasat"
+  },
+  {
+    "employeeCode": "88A1002",
+    "employeeName": "Babu Lal",
+    "joiningDate": "01/11/2021",
+    "gender": "M",
+    "dateOfBirth": "07/02/1987",
+    "fatherName": "Bhagwan Sahay",
+    "department": "IT",
+    "designation": "Project Head",
+    "pan": "ADAPL0527A",
+    "aadhaar": "725320397392",
+    "bankName": "AXIS BANK",
+    "accountNo": "911010047193187",
+    "ifscCode": "UTIB0001007",
+    "mobileNumber": "9873030060",
+    "emailId": "babulal0060@gmail.com",
+    "basicSalary": 99621,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 49810
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 49810
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88A1003",
+    "employeeName": "Gulshan",
+    "joiningDate": "01/11/2021",
+    "gender": "M",
+    "dateOfBirth": "01/05/1999",
+    "fatherName": "J.P. Sharma",
+    "department": "Operations",
+    "designation": "Manager",
+    "pan": "CERPG0826H",
+    "aadhaar": "830140509131",
+    "bankName": "KARUR VYSYA BANK",
+    "accountNo": "4101155000110629",
+    "ifscCode": "KVBL0004101",
+    "mobileNumber": "9717013679",
+    "emailId": "gulshan12207@gmail.com",
+    "basicSalary": 47442,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 23721
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 23721
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88A1004",
+    "employeeName": "Ajay Kumar Saxena",
+    "joiningDate": "01/11/2021",
+    "gender": "M",
+    "dateOfBirth": "20/06/1992",
+    "fatherName": "Late Jayant Kumar Lala",
+    "department": "Operations",
+    "designation": "Manager",
+    "pan": "DYDPS8248Q",
+    "aadhaar": "336743542508",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100446028500",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "8527697925",
+    "emailId": "aj.saxena0326@gmail.com",
+    "basicSalary": 36600,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 18300
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 18300
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1001",
+    "employeeName": "Rashi Gupta",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "19/03/1991",
+    "fatherName": "A. N. Gupta",
+    "department": "Academic",
+    "designation": "Manager",
+    "pan": "BDCPG4329J",
+    "aadhaar": "366855676793",
+    "bankName": "STATE BANK OF INDIA",
+    "accountNo": "65122570810",
+    "ifscCode": "SBIN0050324",
+    "mobileNumber": "9654365202",
+    "emailId": "rashig350@gmail.com",
+    "basicSalary": 25000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 6200
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 6200
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1003",
+    "employeeName": "Raj Kamal Sharma",
+    "joiningDate": "01/11/2021",
+    "gender": "M",
+    "dateOfBirth": "10/02/1989",
+    "fatherName": "Om Vir Sharma",
+    "department": "Academic",
+    "designation": "Asst. Manager",
+    "pan": "DEOPS7788G",
+    "aadhaar": "432153723120",
+    "bankName": "STATE BANK OF INDIA",
+    "accountNo": "31582334723",
+    "ifscCode": "SBIN0018166",
+    "mobileNumber": "9968722755",
+    "emailId": "007kamalrajsharma@gmail.com",
+    "basicSalary": 22000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7650
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 6650
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1007",
+    "employeeName": "Roshan Sharma",
+    "joiningDate": "01/11/2021",
+    "gender": "M",
+    "dateOfBirth": "14/06/1997",
+    "fatherName": "Jai Prakash Sharma",
+    "department": "Academic",
+    "designation": "Asst. Manager",
+    "pan": "CNJPR5123H",
+    "aadhaar": "938129698636",
+    "bankName": "BANK OF MAHARASHTRA",
+    "accountNo": "60285501118",
+    "ifscCode": "MAHB0001744",
+    "mobileNumber": "9911811713",
+    "emailId": "roshansharma110043@gmail.com",
+    "basicSalary": 22138,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 11069
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 11069
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1011",
+    "employeeName": "Meenakshi Gosai",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "05/01/1993",
+    "fatherName": "Late Kundan Lal",
+    "department": "Marketing & Support",
+    "designation": "Business Development Manager",
+    "pan": "BUQPG9684K",
+    "aadhaar": "354855342339",
+    "bankName": "INDIAN OVERSEAS BANK",
+    "accountNo": "076601000061190",
+    "ifscCode": "IOBA0000766",
+    "mobileNumber": "7042668809",
+    "emailId": "meenakshigosai15@gmail.com",
+    "basicSalary": 23500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 10250
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 9250
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1012",
+    "employeeName": "Deepa Chandnani",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "10/02/1989",
+    "fatherName": "Ghanshyam Bharwani",
+    "department": "Marketing & Support",
+    "designation": "Business Development Manager",
+    "pan": "AVLPB5695G",
+    "aadhaar": "563133225753",
+    "bankName": "STATE BANK OF INDIA",
+    "accountNo": "51116630705",
+    "ifscCode": "SBIN0032160",
+    "mobileNumber": "9873452523",
+    "emailId": "deepabharwanis@gmail.com",
+    "basicSalary": 23500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 10500
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 8000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1013",
+    "employeeName": "Jyoti Pal",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "22/05/1993",
+    "fatherName": "J.L Pal",
+    "department": "Marketing & Support",
+    "designation": "Business Development Manager",
+    "pan": "BRRPP8283K",
+    "aadhaar": "863713103811",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100151532802",
+    "ifscCode": "HDFC0000294",
+    "mobileNumber": "7982950540",
+    "emailId": "sen.jyoti5@gmail.com",
+    "basicSalary": 24000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 11000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 9000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1014",
+    "employeeName": "Nidhi Gupta",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "27/10/1975",
+    "fatherName": "J. P. Gupta",
+    "department": "Marketing & Support",
+    "designation": "Business Development Manager",
+    "pan": "AEEPG1703Q",
+    "aadhaar": "840497171317",
+    "bankName": "Canara Bank",
+    "accountNo": "110037818923",
+    "ifscCode": "CNRB0003160",
+    "mobileNumber": "9958127672",
+    "emailId": "nidhi.gupta.ng90@gmail.com",
+    "basicSalary": 26400,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 9121
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 5821
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1022",
+    "employeeName": "Shalini Sharma",
+    "joiningDate": "03/02/2022",
+    "gender": "F",
+    "dateOfBirth": "03/07/1990",
+    "fatherName": "BINNI SHARMA",
+    "department": "Academic",
+    "designation": "Manager",
+    "pan": "DFDPS2978C",
+    "aadhaar": "390094950274",
+    "bankName": "STATE BANK OF INDIA",
+    "accountNo": "20088263301",
+    "ifscCode": "SBIN0011550",
+    "mobileNumber": "9999868854",
+    "emailId": "sharmashalini0307@gmail.com",
+    "basicSalary": 22000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 4500
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 3500
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1041",
+    "employeeName": "Vikas Panwar",
+    "joiningDate": "01/07/2022",
+    "gender": "M",
+    "dateOfBirth": "15/08/1994",
+    "fatherName": "Dilip Keshri",
+    "department": "IT",
+    "designation": "Asst. Manager",
+    "pan": "DNMPP4480B",
+    "aadhaar": "557891030486",
+    "bankName": "KOTAK MAHINDRA BANK",
+    "accountNo": "5246430031",
+    "ifscCode": "KKBK0004596",
+    "mobileNumber": "8755629335",
+    "emailId": "vikashpanwar888@gmail.com",
+    "basicSalary": 26400,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 5100
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1064",
+    "employeeName": "Maheen Ajmali",
+    "joiningDate": "13/10/2022",
+    "gender": "F",
+    "dateOfBirth": "04/08/1997",
+    "fatherName": "Mohd Arif Ajmali",
+    "department": "Marketing & Support",
+    "designation": "Business Development Manager",
+    "pan": "CXGPA1055G",
+    "aadhaar": "299829943417",
+    "bankName": "STATE BANK OF INDIA",
+    "accountNo": "35853508559",
+    "ifscCode": "SBIN0005918",
+    "mobileNumber": "9873907268",
+    "emailId": "maheenajmali974@gmail.com",
+    "basicSalary": 23000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 5600
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1078",
+    "employeeName": "Pinku Kumar",
+    "joiningDate": "10/05/2023",
+    "gender": "M",
+    "dateOfBirth": "15/08/1996",
+    "fatherName": "Amresh Kumar Mishra",
+    "department": "VGLD",
+    "designation": "SEO Executive",
+    "pan": "CVZPK7257B",
+    "aadhaar": "388227818863",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100754820324",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "9485963031",
+    "emailId": "pinkudigitalmarketing@gmail.com",
+    "basicSalary": 28100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 12050
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 8050
+      }
+    ],
+    "pfEligible": true,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88G1087",
+    "employeeName": "Arpit Acharya",
+    "joiningDate": "30/10/2023",
+    "gender": "M",
+    "dateOfBirth": "23/09/1997",
+    "fatherName": "Vimal Acharya",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "CQVPA0022P",
+    "aadhaar": "928630894864",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100823730034",
+    "ifscCode": "HDFC0007285",
+    "mobileNumber": "8268890388",
+    "emailId": "arpitacharya23@gmail.com",
+    "basicSalary": 27912,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 13957
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 13957
+      }
+    ],
+    "pfEligible": true,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1003",
+    "employeeName": "Rachna Ajmani",
+    "joiningDate": "01/11/2021",
+    "gender": "F",
+    "dateOfBirth": "02/10/1980",
+    "fatherName": "Lt. Sh. Harish Chander Batra",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "BHIPA7769N",
+    "aadhaar": "215770644706",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100067622091",
+    "ifscCode": "HDFC0001657",
+    "mobileNumber": "8527697922",
+    "emailId": "rachna@vglearningdestination.com",
+    "basicSalary": 26400,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 6600
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 3300
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1012",
+    "employeeName": "Sandeep Maurya",
+    "joiningDate": "02/01/2022",
+    "gender": "M",
+    "dateOfBirth": "25/08/1997",
+    "fatherName": "Jayprakash Maurya",
+    "department": "IT",
+    "designation": "Mobile Application Developer",
+    "pan": "DEFPM3399Q",
+    "aadhaar": "233161412775",
+    "bankName": "ICICI Bank",
+    "accountNo": "051601003530",
+    "ifscCode": "ICIC0000815",
+    "mobileNumber": "7379258598",
+    "emailId": "me.sandy00@gmail.com",
+    "basicSalary": 41182,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 20591
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 20591
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1018",
+    "employeeName": "Priya Madan",
+    "joiningDate": "01/08/2022",
+    "gender": "F",
+    "dateOfBirth": "03/03/1985",
+    "fatherName": "SUBHASH BANGERA",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "APQPB6598D",
+    "aadhaar": "941384090856",
+    "bankName": "AXIS BANK",
+    "accountNo": "911010066143864",
+    "ifscCode": "UTIB0000739",
+    "mobileNumber": "9654797629",
+    "emailId": "priya.madan331985@gmail.com",
+    "basicSalary": 24229,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 8401
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 7300
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1024",
+    "employeeName": "Monika Dhingra",
+    "joiningDate": "19/12/2022",
+    "gender": "F",
+    "dateOfBirth": "11/11/1982",
+    "fatherName": "",
+    "department": "VGLD",
+    "designation": "Evaluation Support Executive",
+    "pan": "AGKPD1159K",
+    "aadhaar": "936304152231",
+    "bankName": "ICICI Bank",
+    "accountNo": "630101511988",
+    "ifscCode": "ICIC0006301",
+    "mobileNumber": "9873040788",
+    "emailId": "monikadh11@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 8250
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 8250
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1029",
+    "employeeName": "Sandeep",
+    "joiningDate": "01/04/2023",
+    "gender": "M",
+    "dateOfBirth": "28/11/1987",
+    "fatherName": "Shri Sudama Prasad Gupta",
+    "department": "VGLD",
+    "designation": "Operations Executive",
+    "pan": "BTAPS8845P",
+    "aadhaar": "683236866217",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100255004836",
+    "ifscCode": "HDFC0000026",
+    "mobileNumber": "9582781076",
+    "emailId": "sandeepguptaseo@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7480
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1032",
+    "employeeName": "Mohd Ubaid",
+    "joiningDate": "01/04/2023",
+    "gender": "M",
+    "dateOfBirth": "15/06/1997",
+    "fatherName": "Mohd Haseen",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "AHEPU6987F",
+    "aadhaar": "950525699650",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100262389811",
+    "ifscCode": "HDFC0000708",
+    "mobileNumber": "9999314704",
+    "emailId": "ubaidkhan6166@gmail.com",
+    "basicSalary": 38800,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 18900
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 18900
+      }
+    ],
+    "pfEligible": true,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1033",
+    "employeeName": "Jyoti Singh",
+    "joiningDate": "01/04/2023",
+    "gender": "F",
+    "dateOfBirth": "05/10/1997",
+    "fatherName": "Late Mr Madan pal Singh",
+    "department": "VGLD",
+    "designation": "Operations Executive",
+    "pan": "LXKPS2332B",
+    "aadhaar": "335290214255",
+    "bankName": "ICICI Bank",
+    "accountNo": "721801500772",
+    "ifscCode": "ICIC0007218",
+    "mobileNumber": "7982537821",
+    "emailId": "jyotisingh23839@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7150
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1035",
+    "employeeName": "Sugandha Bhatnagar",
+    "joiningDate": "01/04/2023",
+    "gender": "F",
+    "dateOfBirth": "22/05/1988",
+    "fatherName": "Vivek bhatnagar",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "BJYPB9879A",
+    "aadhaar": "756329670090",
+    "bankName": "Indian Bank",
+    "accountNo": "59084158508",
+    "ifscCode": "IDIB000T553",
+    "mobileNumber": "8534999427",
+    "emailId": "sugandhabhatnagar0121@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7700
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 7700
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1047",
+    "employeeName": "Porikhit  Das",
+    "joiningDate": "14/08/2023",
+    "gender": "M",
+    "dateOfBirth": "10/10/1994",
+    "fatherName": "Raju Das",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "BXHPD3077M",
+    "aadhaar": "361057786305",
+    "bankName": "KOTAK MAHINDRA BANK",
+    "accountNo": "7546347903",
+    "ifscCode": "KKBK0004575",
+    "mobileNumber": "8135820955",
+    "emailId": "porikhitdas16@gmail.com",
+    "basicSalary": 30250,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 15125
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 15125
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1050",
+    "employeeName": "Manazir",
+    "joiningDate": "18/09/2023",
+    "gender": "M",
+    "dateOfBirth": "10/09/2000",
+    "fatherName": "Afaq Ahmad",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "EYZPM8286B",
+    "aadhaar": "629843778596",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100683165229",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "7678985427",
+    "emailId": "mr.afaq12345@gmail.com",
+    "basicSalary": 24750,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 12375
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 12375
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1051",
+    "employeeName": "Shohrab Haidar",
+    "joiningDate": "01/09/2023",
+    "gender": "M",
+    "dateOfBirth": "20/04/1998",
+    "fatherName": "Afzal hussain",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "ARPPH2377D",
+    "aadhaar": "634825133916",
+    "bankName": "PUNJAB AND SIND BANK",
+    "accountNo": "14952122003500",
+    "ifscCode": "PUNB0509610",
+    "mobileNumber": "9773605547",
+    "emailId": "sohrabhaider97@gmail.com",
+    "basicSalary": 26500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 9000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 6500
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1052",
+    "employeeName": "Anita Dubey",
+    "joiningDate": "16/11/2023",
+    "gender": "F",
+    "dateOfBirth": "12/08/1976",
+    "fatherName": "P DP CHOURASIA",
+    "department": "VGLD",
+    "designation": "General Manager",
+    "pan": "AMFPD7530B",
+    "aadhaar": "765803347470",
+    "bankName": "ICICI Bank",
+    "accountNo": "631201503816",
+    "ifscCode": "ICIC0006312",
+    "mobileNumber": "9912990661",
+    "emailId": "anitadubay@gmail.com",
+    "basicSalary": 54167,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 27083
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 27083
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1062",
+    "employeeName": "Parth Dilip Saraiya",
+    "joiningDate": "22/01/2024",
+    "gender": "M",
+    "dateOfBirth": "14/04/1995",
+    "fatherName": "Dilip Prabhudas Saraiya",
+    "department": "VGLD",
+    "designation": "Sr. Executive",
+    "pan": "FUNPS2736H",
+    "aadhaar": "384092122476",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100461863868",
+    "ifscCode": "HDFC0000489",
+    "mobileNumber": "7506327714",
+    "emailId": "parthsaraiya77@gmail.com",
+    "basicSalary": 43920,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 19440
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 14640
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1067",
+    "employeeName": "Sangita Chaurasia",
+    "joiningDate": "08/02/2024",
+    "gender": "F",
+    "dateOfBirth": "30/03/1974",
+    "fatherName": "Sangeeta Chourasia",
+    "department": "VGLD",
+    "designation": "Senior Business Development Manager",
+    "pan": "AGFPC0825Q",
+    "aadhaar": "415140302515",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "12281050015374",
+    "ifscCode": "HDFC0001228",
+    "mobileNumber": "7893566120",
+    "emailId": "sangeetachourasia1977@gmail.com",
+    "basicSalary": 35457,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 16032
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 12511
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1076",
+    "employeeName": "Alok Kumar Srivastava",
+    "joiningDate": "01/04/2024",
+    "gender": "M",
+    "dateOfBirth": "02/01/1977",
+    "fatherName": "Awdesh prasad",
+    "department": "VGLD",
+    "designation": "Manager",
+    "pan": "BSCPS3651L",
+    "aadhaar": "881174158755",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100197657364",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "9268048522",
+    "emailId": "aloksrivastva01@gmail.com",
+    "basicSalary": 27500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 12100
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 8800
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1077",
+    "employeeName": "Aman  Kumar",
+    "joiningDate": "08/04/2024",
+    "gender": "M",
+    "dateOfBirth": "03/02/2001",
+    "fatherName": "Ashok Kumar",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "JUSPK9115H",
+    "aadhaar": "940911811731",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100832643671",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "7678231846",
+    "emailId": "amanammu0001@gmail.com",
+    "basicSalary": 23500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 5500
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1085",
+    "employeeName": "Manmohan Singh Rawat",
+    "joiningDate": "17/05/2024",
+    "gender": "M",
+    "dateOfBirth": "20/07/1982",
+    "fatherName": "L S Rawat",
+    "department": "VGLD",
+    "designation": "General Manager",
+    "pan": "AKKPR9916L",
+    "aadhaar": "988868176956",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100286871518",
+    "ifscCode": "HDFC0002005",
+    "mobileNumber": "9643817909",
+    "emailId": "rawatsinghmanmohan@gmail.com",
+    "basicSalary": 37400,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 18700
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 18700
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1089",
+    "employeeName": "Chetan Bisht",
+    "joiningDate": "10/06/2024",
+    "gender": "M",
+    "dateOfBirth": "07/07/1999",
+    "fatherName": "Narottam Bisht",
+    "department": "VGLD",
+    "designation": "Senior Business Development Manager",
+    "pan": "CZSPB6257M",
+    "aadhaar": "781244878416",
+    "bankName": "AXIS BANK",
+    "accountNo": "922010024097820",
+    "ifscCode": "UTIB0004122",
+    "mobileNumber": "9315688493",
+    "emailId": "chetanbisht2715@gmail.com",
+    "basicSalary": 27500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 13750
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 13750
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1090",
+    "employeeName": "Nitin Parashar",
+    "joiningDate": "10/06/2024",
+    "gender": "M",
+    "dateOfBirth": "01/04/1998",
+    "fatherName": "Manoj Parashar",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "DCTPP9267A",
+    "aadhaar": "200341906859",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100744847754",
+    "ifscCode": "HDFC0000279",
+    "mobileNumber": "9582026264",
+    "emailId": "nitinparashar43@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 11550
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 11550
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1091",
+    "employeeName": "Sanjay Tewari",
+    "joiningDate": "10/06/2024",
+    "gender": "M",
+    "dateOfBirth": "01/07/1990",
+    "fatherName": "Lalit Prasad Tewari",
+    "department": "VGLD",
+    "designation": "Business Development Executive",
+    "pan": "AJKPT5665R",
+    "aadhaar": "429920718466",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100485721253",
+    "ifscCode": "HDFC0002061",
+    "mobileNumber": "9999476208",
+    "emailId": "sanjay01tewari@gmail.com",
+    "basicSalary": 22000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 3000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1098",
+    "employeeName": "Unnati  Sharma",
+    "joiningDate": "01/08/2024",
+    "gender": "F",
+    "dateOfBirth": "20/12/1999",
+    "fatherName": "Mukesh",
+    "department": "Marketing & Support",
+    "designation": "Executive",
+    "pan": "AKCPU5172F",
+    "aadhaar": "462728519001",
+    "bankName": "CENTRAL BANK OF INDIA",
+    "accountNo": "3398624832",
+    "ifscCode": "CBIN0280320",
+    "mobileNumber": "9870106997",
+    "emailId": "unnatisharma62@gmail.com",
+    "basicSalary": 24640,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 8360
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1100",
+    "employeeName": "Hrithik  Katyal",
+    "joiningDate": "03/09/2024",
+    "gender": "M",
+    "dateOfBirth": "20/12/1999",
+    "fatherName": "Kharaiti katyal",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "ILOPK3118L",
+    "aadhaar": "291203908019",
+    "bankName": "Canara Bank",
+    "accountNo": "2751101037034",
+    "ifscCode": "CNRB0002751",
+    "mobileNumber": "7838179299",
+    "emailId": "hrithikkatyal62@gmail.com",
+    "basicSalary": 26300,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 13150
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 13150
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1105",
+    "employeeName": "Naved Emamuddin Chauhan",
+    "joiningDate": "06/11/2024",
+    "gender": "M",
+    "dateOfBirth": "15/03/1999",
+    "fatherName": "Emamuddin Chauhan",
+    "department": "VGLD",
+    "designation": "Sr. Business Development Executive",
+    "pan": "BWXPC1258G",
+    "aadhaar": "768700882613",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100403118930",
+    "ifscCode": "HDFC0000411",
+    "mobileNumber": "8898498128",
+    "emailId": "navedmansuri210@gmail.com",
+    "basicSalary": 24773,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 12386
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 12386
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1106",
+    "employeeName": "Pooja Surendra Singh",
+    "joiningDate": "18/11/2024",
+    "gender": "F",
+    "dateOfBirth": "31/05/1997",
+    "fatherName": "Surendra Singh",
+    "department": "VGLD",
+    "designation": "Senior Business Development Manager",
+    "pan": "GOKPS8099F",
+    "aadhaar": "884539469844",
+    "bankName": "ICICI Bank",
+    "accountNo": "641201506765",
+    "ifscCode": "ICIC0006412",
+    "mobileNumber": "9702926635",
+    "emailId": "pooja.singh051997@gmail.com",
+    "basicSalary": 23100,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7810
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 7810
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1110",
+    "employeeName": "Abhishek  Upadhyay",
+    "joiningDate": "03/02/2025",
+    "gender": "M",
+    "dateOfBirth": "29/05/1995",
+    "fatherName": "Om Prakash Upadhyay",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "AHBPU2618Q",
+    "aadhaar": "202275086911",
+    "bankName": "BANK OF INDIA",
+    "accountNo": "718110510001483",
+    "ifscCode": "BKID0007181",
+    "mobileNumber": "7054311774",
+    "emailId": "abhiupadhyay170@gmail.com",
+    "basicSalary": 25000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 7000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 3000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1113",
+    "employeeName": "S Ravi Kumar Dube",
+    "joiningDate": "10/03/2025",
+    "gender": "M",
+    "dateOfBirth": "31/03/1986",
+    "fatherName": "Shivaji Dube",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "APNPD3887N",
+    "aadhaar": "884625587012",
+    "bankName": "KOTAK MAHINDRA BANK",
+    "accountNo": "7611821611",
+    "ifscCode": "KKBK0007451",
+    "mobileNumber": "8977310386",
+    "emailId": "ravidube9@gmail.com",
+    "basicSalary": 25000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 10500
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 6500
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1115",
+    "employeeName": "Unnati  Singh",
+    "joiningDate": "10/06/2025",
+    "gender": "F",
+    "dateOfBirth": "09/05/2003",
+    "fatherName": "Sunil Singh",
+    "department": "VGLD",
+    "designation": "Content Writer Executive",
+    "pan": "PIWPS6408F",
+    "aadhaar": "836112758991",
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100810089015",
+    "ifscCode": "HDFC0004754",
+    "mobileNumber": "9140913937",
+    "emailId": "Unnatisng91@gmail.com",
+    "basicSalary": 22000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 2000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1116",
+    "employeeName": "Neha  Parashar",
+    "joiningDate": "01/07/2025",
+    "gender": "F",
+    "dateOfBirth": "05/05/1996",
+    "fatherName": "Rajesh Mittal",
+    "department": "VGLD",
+    "designation": "Business Development Manager",
+    "pan": "FZSPM5215F",
+    "aadhaar": "863072150926",
+    "bankName": "RBL BANK LTD",
+    "accountNo": "309028265632",
+    "ifscCode": "RATN0000532",
+    "mobileNumber": "8447661624",
+    "emailId": "Nehaprshr555@gmail.com",
+    "basicSalary": 24000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 8500
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 5500
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1118",
+    "employeeName": "Sagar Varma",
+    "joiningDate": 45901,
+    "gender": "M",
+    "dateOfBirth": 35542,
+    "fatherName": "",
+    "department": "",
+    "designation": "Business Development Executive",
+    "pan": "",
+    "aadhaar": "",
+    "bankName": "State Bank of India",
+    "accountNo": "33093018131",
+    "ifscCode": "SBIN0003308",
+    "mobileNumber": 9176358728,
+    "emailId": "sagarvarma0280@gmail.com",
+    "basicSalary": 21500,
+    "allowances": [],
+    "pfEligible": true,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1119",
+    "employeeName": "Aisha Sidhika",
+    "joiningDate": 45666,
+    "gender": "F",
+    "dateOfBirth": "15-03-2000",
+    "fatherName": "",
+    "department": "",
+    "designation": "Business Development Executive",
+    "pan": "",
+    "aadhaar": "",
+    "bankName": "PUNJAB NATIONAL BANK",
+    "accountNo": "4919000100044435",
+    "ifscCode": "PUNB0491900",
+    "mobileNumber": 9789002338,
+    "emailId": "sidhikhaaisha15@gmail.com",
+    "basicSalary": 21300,
+    "allowances": [],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1121",
+    "employeeName": "Riya",
+    "joiningDate": 45925,
+    "gender": "F",
+    "dateOfBirth": "24/11/1998",
+    "fatherName": "Jasinta Tirkey",
+    "department": "",
+    "designation": "Business Development Executive",
+    "pan": "FNDPR1926P",
+    "aadhaar": "932282568271",
+    "bankName": "Canera Bank",
+    "accountNo": "110043317026",
+    "ifscCode": "CNRB0019904",
+    "mobileNumber": "9289909280",
+    "emailId": "Riyachh143@gmail.com",
+    "basicSalary": 21100,
+    "allowances": [],
+    "pfEligible": true,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1123",
+    "employeeName": "Renu Aggarwal",
+    "joiningDate": "",
+    "gender": "F",
+    "dateOfBirth": "",
+    "fatherName": "",
+    "department": "",
+    "designation": "Student Relationship Manager",
+    "pan": "AJVPA9580D",
+    "aadhaar": 344321182069,
+    "bankName": "Canera Bank",
+    "accountNo": "110051564740",
+    "ifscCode": "CNRB0000267",
+    "mobileNumber": 8826856396,
+    "emailId": "",
+    "basicSalary": 28000,
+    "allowances": [],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1124",
+    "employeeName": "Anil Kumar",
+    "joiningDate": 45881,
+    "gender": "M",
+    "dateOfBirth": "",
+    "fatherName": "",
+    "department": "",
+    "designation": "Business Development Manager",
+    "pan": "EIRPK6138N",
+    "aadhaar": 591717287710,
+    "bankName": "Kotak MahiNDRA BANK",
+    "accountNo": "4750329411",
+    "ifscCode": "KKBK0000203",
+    "mobileNumber": 9005654216,
+    "emailId": "anil@vglearningdestination.com",
+    "basicSalary": 35000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 5000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 4000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1122",
+    "employeeName": "Asad Ansari",
+    "joiningDate": 45759,
+    "gender": "M",
+    "dateOfBirth": "23-12-2000",
+    "fatherName": "",
+    "department": "",
+    "designation": "Business Development Manager",
+    "pan": "DJCPA3887H",
+    "aadhaar": 493673568805,
+    "bankName": "HDFC BANK LTD",
+    "accountNo": "50100749133206",
+    "ifscCode": "HDFC0001236",
+    "mobileNumber": 7982177523,
+    "emailId": "mdasadansari2000@gmail.com",
+    "basicSalary": 43560,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 4737
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 3475
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1125",
+    "employeeName": "Lakshminarayan Agrawal",
+    "joiningDate": 45912,
+    "gender": "M",
+    "dateOfBirth": 35193,
+    "fatherName": "Jagdish Prasad",
+    "department": "",
+    "designation": "Business Development Manager",
+    "pan": "CGSPA0647K",
+    "aadhaar": 766030561836,
+    "bankName": "Yes Bank",
+    "accountNo": "7294000000049",
+    "ifscCode": "YESB0000072",
+    "mobileNumber": 8630738106,
+    "emailId": "lnagrawal005@gmail.com",
+    "basicSalary": 24000,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 4000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 4000
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1127",
+    "employeeName": "Deep Ghatak",
+    "joiningDate": "15-04-2025",
+    "gender": "M",
+    "dateOfBirth": 31635,
+    "fatherName": "Prasanta Kumar Ghatak",
+    "department": "",
+    "designation": "Business Development Manager",
+    "pan": "AITPG5879Q",
+    "aadhaar": 392853690406,
+    "bankName": "HSBC Bank",
+    "accountNo": "74282930006",
+    "ifscCode": "HSBC0560002",
+    "mobileNumber": 8929230328,
+    "emailId": "deep.ghatak@zohomail.in",
+    "basicSalary": 23400,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 6000
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 2600
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  },
+  {
+    "employeeCode": "88V1126",
+    "employeeName": "Abhishek Verma",
+    "joiningDate": "16-03-2026",
+    "gender": "M",
+    "dateOfBirth": 35076,
+    "fatherName": "Ravi Kumar Verma",
+    "department": "",
+    "designation": "Business Development Manager",
+    "pan": "BFNPV5003B",
+    "aadhaar": 918480195476,
+    "bankName": "Bank of Baroda",
+    "accountNo": "79990100007448",
+    "ifscCode": "BARB0VJHAJI",
+    "mobileNumber": 9337818142,
+    "emailId": "abhishekverma683@gmail.com",
+    "basicSalary": 24500,
+    "allowances": [
+      {
+        "name": "House Rent Allowance",
+        "amount": 10250
+      },
+      {
+        "name": "Special Allowance",
+        "amount": 10250
+      }
+    ],
+    "pfEligible": false,
+    "esicEligible": false
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "employeeCode": "88A1001",
+    "leaveType": "Unpaid",
+    "days": 1.5,
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-31",
+    "reason": "",
+    "id": "1781189463495",
+    "status": "Approved"
+  }
+]

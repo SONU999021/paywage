@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
 import { ToastProvider } from '@/components/ui/Toast';
+import { ErrorBoundary } from '@/components/layout/ErrorBoundary';
 import { ProtectedRoute } from '@/components/layout/ProtectedRoute';
 import { AppLayout } from '@/components/layout/AppLayout';
 import { LandingPage } from '@/pages/LandingPage';
@@ -35,6 +36,7 @@ export default function App() {
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
         <BrowserRouter>
+          <ErrorBoundary>
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
@@ -65,6 +67,7 @@ export default function App() {
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </ErrorBoundary>
         </BrowserRouter>
         </ToastProvider>
       </QueryClientProvider>

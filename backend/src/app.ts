@@ -16,7 +16,18 @@ app.set('trust proxy', 1);
 app.use(helmet({ crossOriginResourcePolicy: { policy: 'cross-origin' } }));
 app.use(
   cors({
-    origin: getAllowedOrigins(),
+    origin: (origin, callback) => {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+      const allowed = getAllowedOrigins();
+      const isAllowed =
+        allowed.includes(origin) ||
+        origin.endsWith('.vercel.app') ||
+        origin.endsWith('.up.railway.app');
+      callback(null, isAllowed);
+    },
     credentials: true,
   }),
 );

@@ -9,7 +9,10 @@ export const registerSchema = z.object({
   companyName: z.string().min(2),
   address: z.string().min(5),
   pan: z.string().transform((v) => v.toUpperCase()),
-  gst: z.string().optional().transform((v) => v?.toUpperCase()),
+  gst: z.preprocess(
+    (v) => (v === '' || v === null || v === undefined ? undefined : String(v).toUpperCase()),
+    z.string().optional(),
+  ),
   phone: z.string().min(10),
   email: z.string().email(),
   password: z.string().min(8),
@@ -44,7 +47,7 @@ export async function registerCompany(data: z.infer<typeof registerSchema>) {
       name: data.companyName,
       address: data.address,
       pan: data.pan,
-      gst: data.gst,
+      gst: data.gst || null,
       phone: data.phone,
       email: data.email,
       users: {

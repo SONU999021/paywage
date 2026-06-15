@@ -15,8 +15,10 @@ router.post('/register', async (req, res, next) => {
   try {
     const data = authService.registerSchema.parse(req.body);
     const result = await authService.registerCompany(data);
+    console.info('[auth/register] success', { email: data.email, companyId: result.companyId });
     res.status(201).json(result);
   } catch (err) {
+    console.error('[auth/register] failed', err);
     next(err);
   }
 });

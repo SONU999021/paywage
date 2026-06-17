@@ -16,10 +16,7 @@ export function getApiErrorMessage(error: unknown, fallback = 'Something went wr
       return data.error;
     }
     if (error.response.status === 405) {
-      const url = error.config?.baseURL
-        ? `${error.config.baseURL}${error.config.url ?? ''}`
-        : 'unknown';
-      return `Request blocked (405). API URL "${url}" does not accept ${error.config?.method?.toUpperCase() ?? 'this method'}. On Vercel, API calls must use /api (proxied to Railway).`;
+      return 'Request blocked (405). Please hard-refresh the page (Ctrl+Shift+R) after the latest deploy. If it persists, check that the backend is running on Railway.';
     }
     if (error.response.status === 404) {
       return 'API endpoint not found. Check that the backend is deployed and VITE_API_URL is correct.';

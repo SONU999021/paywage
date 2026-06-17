@@ -1,65 +1,27 @@
-/** Railway production API — direct calls (e.g. Railway-hosted frontend). */
+/** Railway production API — used for Vercel and direct production calls. */
 export const PRODUCTION_API_URL = 'https://backend-production-fa482.up.railway.app/api';
 
 function isLocalHost(hostname: string): boolean {
   return hostname === 'localhost' || hostname === '127.0.0.1';
 }
 
-function isVercelHost(hostname: string): boolean {
-  return hostname.endsWith('.vercel.app');
-}
-
-function isMisconfiguredApiUrl(url: string): boolean {
-  try {
-    const parsed = new URL(url, window.location.origin);
-    return (
-      parsed.hostname.endsWith('.vercel.app') ||
-      parsed.hostname === window.location.hostname
-    );
-  } catch {
-    return url.startsWith('/');
-  }
-}
-
-function shouldUseSameOriginProxy(hostname: string): boolean {
-  if (isLocalHost(hostname) || isVercelHost(hostname)) {
-    return true;
-  }
-  // Railway-hosted frontend (server.mjs proxies /api → backend)
-  if (hostname.endsWith('.up.railway.app') && !hostname.startsWith('backend')) {
-    return true;
-  }
-  return false;
+function isRailwayFrontend(hostname: string): boolean {
+  return hostname.endsWith('.up.railway.app') && !hostname.includes('backend');
 }
 
 /**
- * Resolve API base URL at runtime.
- * On Vercel/Railway frontend we use same-origin /api (proxied to Railway backend).
+ * Vercel cannot reliably proxy POST /api via static rewrites alone.
+ * On Vercel we call Railway directly (backend CORS allows *.vercel.app).
+ * Local dev and Railway-hosted frontend still use same-origin /api proxy.
  */
 export function resolveApiBaseUrl(): string {
   if (typeof window !== 'undefined') {
     const { hostname } = window.location;
 
-    if (shouldUseSameOriginProxy(hostname)) {
+    if (isLocalHost(hostname) || isRailwayFrontend(hostname)) {
       return '/api';
     }
   }
 
-  const fromEnv = import.meta.env.VITE_API_URL?.trim();
-  if (fromEnv) {
-    const normalized = fromEnv.replace(/\/$/, '');
-
-    if (typeof window !== 'undefined' && isMisconfiguredApiUrl(normalized)) {
-      console.warn('[PayWager] VITE_API_URL points at the frontend; using /api proxy instead.');
-      return '/api';
-    }
-
-    return normalized;
-  }
-
-  if (import.meta.env.PROD) {
-    return PRODUCTION_API_URL;
-  }
-
-  return '/api';
+  return PRODUCTION_API_URL;
 }

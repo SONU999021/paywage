@@ -1,11 +1,10 @@
 import axios from 'axios';
+import { resolveApiBaseUrl } from '@/config/apiUrl';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+export const apiBaseUrl = resolveApiBaseUrl();
 
-export const apiBaseUrl = API_BASE_URL.replace(/\/$/, '');
-
-if (import.meta.env.DEV) {
-  console.info('[PayWager API]', apiBaseUrl);
+if (import.meta.env.DEV || import.meta.env.PROD) {
+  console.info('[PayWager API] base URL:', apiBaseUrl);
 }
 
 const api = axios.create({

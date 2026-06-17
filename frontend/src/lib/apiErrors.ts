@@ -15,6 +15,12 @@ export function getApiErrorMessage(error: unknown, fallback = 'Something went wr
     if (data?.error) {
       return data.error;
     }
+    if (error.response.status === 405) {
+      return 'Request blocked (405 Method Not Allowed). The API URL may be misconfigured — ensure VITE_API_URL points to your Railway backend.';
+    }
+    if (error.response.status === 404) {
+      return 'API endpoint not found. Check that the backend is deployed and VITE_API_URL is correct.';
+    }
     if (error.response.status === 409) {
       return 'This email or PAN is already registered.';
     }

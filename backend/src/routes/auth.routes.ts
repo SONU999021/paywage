@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import { ZodError } from 'zod';
 import * as authService from '../services/auth.service.js';
 import { AppError } from '../middleware/errorHandler.js';
 
@@ -18,7 +19,9 @@ router.post('/register', async (req, res, next) => {
     console.info('[auth/register] success', { email: data.email, companyId: result.companyId });
     res.status(201).json(result);
   } catch (err) {
-    console.error('[auth/register] failed', err);
+    if (!(err instanceof ZodError)) {
+      console.error('[auth/register] failed', err);
+    }
     next(err);
   }
 });

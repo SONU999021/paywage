@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
-    "start:production": "node scripts/start-production.mjs",
+    "start": "node scripts/start-production.mjs",
     "postinstall": "prisma generate",
     "railway:build": "prisma generate && npm run build && prisma migrate deploy",
     "test": "vitest run",

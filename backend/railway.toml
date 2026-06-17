@@ -3,9 +3,10 @@ builder = "nixpacks"
 buildCommand = "npm install && npx prisma generate --schema=./prisma/schema.prisma && npm run build"
 
 [deploy]
+# Use node directly — NOT "npm start" (avoids workspace SIGTERM wrapper)
 startCommand = "node scripts/start-production.mjs"
 healthcheckPath = "/health"
-healthcheckTimeout = 180
+healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
 

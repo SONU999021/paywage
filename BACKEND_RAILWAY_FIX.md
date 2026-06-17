@@ -82,3 +82,52 @@ Expected:
 | `RAILWAY_API_URL` | `https://backend-production-fa482.up.railway.app` |
 
 Redeploy Vercel frontend.
+
+---
+
+## Fix SIGTERM / `npm error command sh -c node dist/index.js`
+
+This means Railway **killed the container** before the app became healthy.
+
+### Cause 1 — Wrong Root Directory (your logs show `/app/backend`)
+
+Railway is deploying the **monorepo root**, not the `backend` folder alone.
+
+| Setting | Correct value |
+|---------|----------------|
+| **Root Directory** | `backend` |
+
+Go to: **backend service → Settings → Root Directory → type `backend` → Save → Redeploy**
+
+### Cause 2 — Missing environment variables
+
+App exits immediately → health check fails → **SIGTERM**.
+
+Set `DATABASE_URL`, `JWT_SECRET`, `JWT_REFRESH_SECRET` (see Step 2 above).
+
+### Cause 3 — Wrong start command
+
+In **Settings → Deploy → Custom Start Command**, set:
+
+```
+node scripts/start-production.mjs
+```
+
+Remove any override that says `npm start` or `node dist/index.js`.
+
+### Cause 4 — Migration slow on first boot
+
+Health check waits up to 300s in latest config. After fixing Root Directory and env vars, redeploy.
+
+### Expected logs after fix
+
+```
+========================================
+  PayWager API — starting
+========================================
+  DATABASE_URL: (set)
+  JWT_SECRET: (set)
+[start] Running database migrations...
+[start] Migrations complete.
+PayWager API listening on 0.0.0.0:XXXX
+```

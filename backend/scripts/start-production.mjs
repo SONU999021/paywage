@@ -1,51 +1,41 @@
 /**
- * Railway production start: validate env → migrate DB → start API server.
+ * Railway production entrypoint.
+ * 1. Validate DATABASE_URL
+ * 2. Run migrations (sync)
+ * 3. Start API server (same process — avoids npm SIGTERM wrapper issues)
  */
-import { spawn } from 'node:child_process';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-function run(command, args, label) {
-  return new Promise((resolve, reject) => {
-    console.log(`\n[start] ${label}...`);
-    const child = spawn(command, args, {
-      cwd: root,
-      stdio: 'inherit',
-      shell: true,
-      env: process.env,
-    });
-    child.on('error', reject);
-    child.on('exit', (code) => {
-      if (code === 0) resolve();
-      else reject(new Error(`${label} failed with exit code ${code}`));
-    });
+console.log('========================================');
+console.log('  PayWager API — starting');
+console.log('========================================');
+console.log('  PORT:', process.env.PORT || '5000');
+console.log('  NODE_ENV:', process.env.NODE_ENV || 'development');
+console.log('  DATABASE_URL:', process.env.DATABASE_URL ? '(set)' : 'MISSING');
+console.log('  JWT_SECRET:', process.env.JWT_SECRET ? '(set)' : 'MISSING');
+
+if (!process.env.DATABASE_URL) {
+  console.error('\nFATAL: DATABASE_URL is not set.');
+  console.error('Railway → backend → Variables → Add Reference → PostgreSQL → DATABASE_URL\n');
+  process.exit(1);
+}
+
+try {
+  console.log('\n[start] Running database migrations...');
+  execSync('npx prisma migrate deploy --schema=./prisma/schema.prisma', {
+    cwd: root,
+    stdio: 'inherit',
+    env: process.env,
   });
+  console.log('[start] Migrations complete.\n');
+} catch {
+  console.error('\nFATAL: Database migration failed. Check DATABASE_URL and PostgreSQL is running.\n');
+  process.exit(1);
 }
 
-async function main() {
-  console.log('========================================');
-  console.log('  PayWager API — production startup');
-  console.log('========================================');
-  console.log('  PORT:', process.env.PORT || '5000');
-  console.log('  NODE_ENV:', process.env.NODE_ENV || 'development');
-  console.log('  DATABASE_URL:', process.env.DATABASE_URL ? '(set)' : 'MISSING');
-
-  if (!process.env.DATABASE_URL) {
-    console.error('\nERROR: DATABASE_URL is not set.');
-    console.error('In Railway: link PostgreSQL → Variables → Add Reference → DATABASE_URL\n');
-    process.exit(1);
-  }
-
-  try {
-    await run('npx', ['prisma', 'migrate', 'deploy', '--schema=./prisma/schema.prisma'], 'Database migrations');
-    await run('node', ['dist/index.js'], 'API server');
-  } catch (error) {
-    console.error('\n[start] Startup failed:', error.message);
-    process.exit(1);
-  }
-}
-
-main();
+// Start server in this process (env validation happens on import)
+await import(path.join(root, 'dist/index.js'));

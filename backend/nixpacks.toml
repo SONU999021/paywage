@@ -13,5 +13,6 @@ cmds = [
   "npm run build"
 ]
 
+# Direct node — not npm start
 [start]
 cmd = "node scripts/start-production.mjs"

@@ -11,7 +11,8 @@ function resolveBackend() {
   if (vite) {
     return vite.replace(/\/api\/?$/, '').replace(/\/$/, '');
   }
-  return null;
+  // Default — user's Railway backend domain
+  return 'https://backend-production-fa482.up.railway.app';
 }
 
 function buildTargetUrl(req, backend) {
@@ -37,14 +38,6 @@ function forwardHeaders(req) {
 
 async function handler(req, res) {
   const backend = resolveBackend();
-  if (!backend) {
-    res.status(500).json({
-      error:
-        'Backend URL not configured. Set RAILWAY_API_URL on Vercel (e.g. https://your-service.up.railway.app).',
-    });
-    return;
-  }
-
   const target = buildTargetUrl(req, backend);
   const method = req.method || 'GET';
 

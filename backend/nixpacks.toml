@@ -10,9 +10,8 @@ cmds = ["npm install"]
 [phases.build]
 cmds = [
   "npx prisma generate --schema=./prisma/schema.prisma",
-  "npm run build",
-  "npx prisma migrate deploy --schema=./prisma/schema.prisma"
+  "npm run build"
 ]
 
 [start]
-cmd = "node dist/index.js"
+cmd = "node scripts/start-production.mjs"

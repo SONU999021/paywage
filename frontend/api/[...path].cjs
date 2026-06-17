@@ -1,25 +1,24 @@
 /**
- * Vercel serverless proxy — forwards /api/* to the Railway backend.
- * POST/PUT/PATCH/DELETE work here; SPA rewrites alone return 405 for POST.
+ * Vercel serverless proxy (CommonJS — isolated from package "type":"module").
+ * Forwards /api/* to Railway. Set RAILWAY_API_URL in Vercel env vars.
  */
-const BACKEND =
-  process.env.RAILWAY_API_URL ||
-  process.env.VITE_API_URL?.replace(/\/api\/?$/, '') ||
-  'https://backend-production-fa482.up.railway.app';
+function resolveBackend() {
+  const railway = process.env.RAILWAY_API_URL?.trim();
+  if (railway) {
+    return railway.replace(/\/api\/?$/, '').replace(/\/$/, '');
+  }
+  const vite = process.env.VITE_API_URL?.trim();
+  if (vite) {
+    return vite.replace(/\/api\/?$/, '').replace(/\/$/, '');
+  }
+  return null;
+}
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb',
-    },
-  },
-};
-
-function buildTargetUrl(req) {
+function buildTargetUrl(req, backend) {
   const segments = req.query.path;
   const apiPath = Array.isArray(segments) ? segments.join('/') : segments || '';
   const search = req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
-  return `${BACKEND.replace(/\/$/, '')}/api/${apiPath}${search}`;
+  return `${backend}/api/${apiPath}${search}`;
 }
 
 function forwardHeaders(req) {
@@ -36,8 +35,17 @@ function forwardHeaders(req) {
   return headers;
 }
 
-export default async function handler(req, res) {
-  const target = buildTargetUrl(req);
+async function handler(req, res) {
+  const backend = resolveBackend();
+  if (!backend) {
+    res.status(500).json({
+      error:
+        'Backend URL not configured. Set RAILWAY_API_URL on Vercel (e.g. https://your-service.up.railway.app).',
+    });
+    return;
+  }
+
+  const target = buildTargetUrl(req, backend);
   const method = req.method || 'GET';
 
   const init = {
@@ -62,7 +70,17 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('[api proxy]', method, target, error);
     res.status(502).json({
-      error: 'Unable to reach the backend API. Check Railway deployment.',
+      error: `Cannot reach Railway backend at ${backend}. Check that the backend service is running and RAILWAY_API_URL is correct.`,
     });
   }
 }
+
+handler.config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+  },
+};
+
+module.exports = handler;

@@ -7,10 +7,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, 'dist');
 const port = Number(process.env.PORT) || 8080;
 const host = '0.0.0.0';
-const backendOrigin =
-  process.env.RAILWAY_API_URL ||
-  process.env.VITE_API_URL?.replace(/\/api\/?$/, '') ||
-  'https://backend-production-fa482.up.railway.app';
+const backendOrigin = (() => {
+  const railway = process.env.RAILWAY_API_URL?.trim();
+  if (railway) return railway.replace(/\/api\/?$/, '').replace(/\/$/, '');
+  const vite = process.env.VITE_API_URL?.trim();
+  if (vite) return vite.replace(/\/api\/?$/, '').replace(/\/$/, '');
+  return null;
+})();
 
 function readBody(req) {
   return new Promise((resolve, reject) => {
@@ -22,6 +25,12 @@ function readBody(req) {
 }
 
 async function proxyApi(req, res, rawUrl) {
+  if (!backendOrigin) {
+    res.writeHead(500, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Set RAILWAY_API_URL or VITE_API_URL to your backend URL.' }));
+    return;
+  }
+
   const [pathname, search = ''] = (rawUrl || '').split('?');
   const apiPath = pathname.replace(/^\/api\/?/, '');
   const target = `${backendOrigin.replace(/\/$/, '')}/api/${apiPath}${search ? `?${search}` : ''}`;

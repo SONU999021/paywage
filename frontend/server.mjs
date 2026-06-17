@@ -7,6 +7,44 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, 'dist');
 const port = Number(process.env.PORT) || 8080;
 const host = '0.0.0.0';
+const backendOrigin =
+  process.env.RAILWAY_API_URL ||
+  process.env.VITE_API_URL?.replace(/\/api\/?$/, '') ||
+  'https://backend-production-fa482.up.railway.app';
+
+function readBody(req) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    req.on('data', (chunk) => chunks.push(chunk));
+    req.on('end', () => resolve(Buffer.concat(chunks)));
+    req.on('error', reject);
+  });
+}
+
+async function proxyApi(req, res, rawUrl) {
+  const [pathname, search = ''] = (rawUrl || '').split('?');
+  const apiPath = pathname.replace(/^\/api\/?/, '');
+  const target = `${backendOrigin.replace(/\/$/, '')}/api/${apiPath}${search ? `?${search}` : ''}`;
+
+  const headers = {};
+  if (req.headers['content-type']) headers['Content-Type'] = req.headers['content-type'];
+  if (req.headers.authorization) headers.Authorization = req.headers.authorization;
+
+  try {
+    const body =
+      req.method !== 'GET' && req.method !== 'HEAD' ? await readBody(req) : undefined;
+    const response = await fetch(target, { method: req.method, headers, body });
+    const text = await response.text();
+    res.writeHead(response.status, {
+      'Content-Type': response.headers.get('content-type') || 'application/json',
+    });
+    res.end(text);
+  } catch (error) {
+    log('API proxy error:', error);
+    res.writeHead(502, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Unable to reach backend API' }));
+  }
+}
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -44,6 +82,11 @@ const server = http.createServer((req, res) => {
   if (urlPath === '/health') {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ status: 'ok', service: 'paywage-web' }));
+    return;
+  }
+
+  if (urlPath.startsWith('/api/') || urlPath === '/api') {
+    void proxyApi(req, res, req.url);
     return;
   }
 
